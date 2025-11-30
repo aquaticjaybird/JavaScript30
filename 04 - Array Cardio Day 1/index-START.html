@@ -117,7 +117,13 @@ peopleFilterLast = people.sort();
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    vehiclesSum = data.reduce((sumObj, item) => {
+      if (!(item in sumObj)) {
+        sumObj[item] = 0;
+      }
+      sumObj[item]++;
+      return sumObj;
+    },{});
   </script>
 </body>
 </html>
